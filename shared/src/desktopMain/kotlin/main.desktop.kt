@@ -1,0 +1,1 @@
+actual fun getPlatformName(): String = System.getProperty("os.name")

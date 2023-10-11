@@ -1,5 +1,7 @@
 import androidx.compose.ui.window.ComposeUIViewController
 
-actual fun getPlatformName(): String = "iOS"
+import platform.UIKit.UIDevice
+
+actual fun getPlatformName(): String = UIDevice.currentDevice.systemName() + " " + UIDevice.currentDevice.systemVersion
 
 fun MainViewController() = ComposeUIViewController { App() }
